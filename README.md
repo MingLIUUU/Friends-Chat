@@ -37,15 +37,10 @@ Friends-Chat is a chat software written in C, designed to provide a lightweight 
    ./client
    ```
 
-## Usage Instructions
-
-// Add basic usage instructions here, such as how to start a chat, add friends, etc.
-
 ## Tech Stack
 
 - C programming language
 - Socket programming
-// ... Add other technologies used ...
 
 
 ## Acknowledgements
