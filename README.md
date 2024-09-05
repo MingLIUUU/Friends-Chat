@@ -12,7 +12,6 @@ Friends-Chat is a chat software written in C, designed to provide a lightweight 
 - User-friendly simple interface
 - Multi-user support
 - Secure data transmission
-// ... Add more features ...
 
 ## Installation Guide
 
