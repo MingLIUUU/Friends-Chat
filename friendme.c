@@ -38,10 +38,7 @@ int process_args(int cmd_argc, char **cmd_argv, User **user_list_ptr) {
         }
 
     } else if (strcmp(cmd_argv[0], "list_users") == 0 && cmd_argc == 1) {
-        char *buf;
-        buf = list_users(user_list);
-        printf("%s", buf);
-        free(buf);
+        list_users(user_list);
 
     } else if (strcmp(cmd_argv[0], "make_friends") == 0 && cmd_argc == 3) {
         switch (make_friends(cmd_argv[1], cmd_argv[2], user_list)) {
@@ -91,12 +88,8 @@ int process_args(int cmd_argc, char **cmd_argv, User **user_list_ptr) {
         }
     } else if (strcmp(cmd_argv[0], "profile") == 0 && cmd_argc == 2) {
         User *user = find_user(cmd_argv[1], user_list);
-        if (print_user(user) == NULL) {
+        if (print_user(user) == 1) {
             error("user not found");
-        } else {
-            char *buf = print_user(user);
-            printf("%s", buf);
-            free(buf);
         }
     } else {
         error("Incorrect syntax");
