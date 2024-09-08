@@ -27,13 +27,13 @@ Friends-Chat is a chat software written in C, designed to provide a lightweight 
    ```
    make
    ```
-4. Run the server:
+4. Run the server, with a port number of your choice, we use 56403 for example:
    ```
-   ./server
+   ./friend_server 56403
    ```
 5. Run the client in another terminal:
    ```
-   ./client
+   nc localhost 56403
    ```
 
 ## Tech Stack
@@ -41,6 +41,24 @@ Friends-Chat is a chat software written in C, designed to provide a lightweight 
 - C programming language
 - Socket programming
 
+## Commands
+
+1. Enter the username to login, enter "quit" to exit:
+   ```
+   quit
+   ```
+2. Enter "list_users" to list all users:
+   ```
+   list_users
+   ```
+3. Enter "make_friends [target]" to make friends with another user:
+   ```
+   make_friends Bob
+   ```
+4. Enter "post [target] [msgpiece ...]" to post a message to a friend:
+   ```
+   post Bob Hello, how are you today?
+   ```
 
 ## Acknowledgements
 
@@ -53,3 +71,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 If you have any questions or suggestions, please contact us through GitHub issues.
+
